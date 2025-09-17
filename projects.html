@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Hamed Taeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#0d1117; --panel:#161b22; --text:#c9d1d9; --muted:#8b949e; --brand:#58a6ff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",sans-serif;background:var(--bg);color:var(--text)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav{display:flex;gap:1rem;align-items:center;justify-content:center;background:linear-gradient(135deg,#1f6feb,#0d1117);padding:0.9rem 1rem;position:sticky;top:0}
+    .nav a{color:#fff;font-weight:600}
+    header{padding:2.2rem 1rem;text-align:center;background:#0d1117}
+    header h1{margin:0 0 .5rem;font-size:2.2rem}
+    header p{margin:0;color:#d0d7de}
+    main{max-width:1000px;margin:0 auto;padding:2rem 1rem}
+    .proj{background:var(--panel);border:1px solid #202938;border-radius:12px;padding:1.2rem;margin-bottom:1rem}
+    .proj h2{margin:.2rem 0 0.6rem;color:var(--brand)}
+    .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem}
+    .tag{font-size:.85rem;border:1px solid #223041;background:#19212a;color:#c9d1d9;border-radius:999px;padding:.25rem .6rem}
+    .row{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:880px){.row{grid-template-columns:1.3fr .7fr}}
+    .muted{color:var(--muted)}
+    footer{background:var(--panel);color:var(--muted);text-align:center;padding:1.2rem;margin-top:2rem;border-top:1px solid #202938}
+    .btn{display:inline-block;padding:.5rem .8rem;border:1px solid #2a3a52;border-radius:8px;background:#1a2431}
+    .btn:hover{background:#213047}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/projects.html">Projects</a>
+  <a href="https://www.linkedin.com/in/hamedtaeb" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="mailto:hamedtaeb@gmail.com">Contact</a>
+</nav>
+
+<header>
+  <h1>Projects</h1>
+  <p>Hands-on work across classification, regression, time series, NLP, and product analytics.</p>
+</header>
+
+<main>
+
+  <!-- Churn -->
+  <section class="proj">
+    <h2>Customer Churn Prediction</h2>
+    <div class="meta">
+      <span class="tag">Classification</span>
+      <span class="tag">Logistic Regression</span>
+      <span class="tag">Decision Tree</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">XGBoost</span>
+      <span class="tag">LightGBM</span>
+      <span class="tag">F1 • AUC-ROC</span>
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+    </div>
+    <div class="row">
+      <div>
+        <p>End-to-end churn pipeline comparing multiple tree-based and linear models with
+           <strong>hyperparameter tuning</strong> and robust evaluation via <strong>F1</strong> and <strong>AUC-ROC</strong>.
+           Includes feature engineering, class balance handling, and error analysis.</p>
+        <a class="btn" href="https://github.com/hamedtaeb/Customer-Churn-Prediction" target="_blank" rel="noopener">View Repository →</a>
+      </div>
+      <div class="muted">
+        <p><em>Highlights</em></p>
+        <ul>
+          <li>Model selection via cross-validation & grid/random search</li>
+          <li>Explainability: feature importance & partial insights</li>
+          <li>Production-ready structure: notebooks + utils modules</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Car Price -->
+  <section class="proj">
+    <h2>Used Car Price Prediction</h2>
+    <div class="meta">
+      <span class="tag">Regression</span>
+      <span class="tag">Linear Regression</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">LightGBM</span>
+      <span class="tag">RMSE</span>
+      <span class="tag">Python</span>
+    </div>
+    <div class="row">
+      <div>
+        <p>Supervised regression suite to predict used car prices. Benchmarked multiple models and selected the best by
+           <strong>RMSE</strong>. Includes feature engineering and rigorous validation.</p>
+        <a class="btn" href="#" onclick="alert('Repo coming soon');return false;">Repository (coming soon)</a>
+      </div>
+      <div class="muted">
+        <ul>
+          <li>Outlier handling & transformation for skewed targets</li>
+          <li>Feature selection to reduce variance & improve generalization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Taxi Forecast -->
+  <section class="proj">
+    <h2>Taxi Demand Forecasting</h2>
+    <div class="meta">
+      <span class="tag">Time Series</span>
+      <span class="tag">Feature Engineering</span>
+      <span class="tag">Forecasting</span>
+      <span class="tag">Python</span>
+    </div>
+    <div class="row">
+      <div>
+        <p>Forecasted hourly taxi demand using time-series decomposition, holiday/seasonality features, and rolling stats.
+           Designed for operational planning & alerting.</p>
+        <a class="btn" href="#" onclick="alert('Repo coming soon');return false;">Repository (coming soon)</a>
+      </div>
+      <div class="muted">
+        <ul>
+          <li>Lag/rolling features, trend & seasonality capture</li>
+          <li>Backtesting strategy for fair evaluation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMDB NLP -->
+  <section class="proj">
+    <h2>IMDB Sentiment Classifier (NLP)</h2>
+    <div class="meta">
+      <span class="tag">NLP</span>
+      <span class="tag">Text Classification</span>
+      <span class="tag">Vectorization</span>
+      <span class="tag">F1</span>
+      <span class="tag">Python</span>
+    </div>
+    <div class="row">
+      <div>
+        <p>End-to-end sentiment analysis pipeline: preprocessing, vectorization (e.g., TF-IDF), and classification
+           with evaluation focused on <strong>F1</strong> and error analysis.</p>
+        <a class="btn" href="#" onclick="alert('Repo coming soon');return false;">Repository (coming soon)</a>
+      </div>
+      <div class="muted">
+        <ul>
+          <li>Text cleaning, tokenization, and n-gram features</li>
+          <li>Model comparison & threshold tuning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  👋 Back to <a href="/">Home</a> &nbsp;|&nbsp; 📩 <a href="mailto:hamedtaeb@gmail.com">hamedtaeb@gmail.com</a>
+</footer>
+
+</body>
+</html>
