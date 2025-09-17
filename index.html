@@ -1,77 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Hamed Taeb | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
-    header { background: #0d1117; color: #fff; padding: 2rem; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { font-size: 1.2rem; }
-    section { padding: 2rem; max-width: 900px; margin: auto; }
-    h2 { color: #0d1117; }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .card h3 { margin-top: 0; }
-    footer { background: #0d1117; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    :root { --bg:#0d1117; --panel:#161b22; --text:#c9d1d9; --muted:#8b949e; --brand:#58a6ff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",sans-serif;background:var(--bg);color:var(--text)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav{display:flex;gap:1rem;align-items:center;justify-content:center;background:linear-gradient(135deg,#1f6feb,#0d1117);padding:0.9rem 1rem;position:sticky;top:0}
+    .nav a{color:#fff;font-weight:600}
+    header{padding:3rem 1rem;text-align:center;background:#0d1117}
+    header h1{margin:0 0 0.5rem;font-size:2.6rem}
+    header p{margin:0;color:#d0d7de}
+    section{max-width:1000px;margin:0 auto;padding:2rem 1rem}
+    h2{color:var(--brand);margin:0 0 1rem}
+    .pill{display:inline-block;margin:.25rem .3rem;padding:.4rem .6rem;border-radius:999px;background:#19212a;color:#c9d1d9;font-size:.9rem;border:1px solid #223041}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+    .card{background:var(--panel);border-radius:12px;padding:1.2rem;border:1px solid #202938;box-shadow:0 2px 8px rgba(0,0,0,.35);transition:transform .18s}
+    .card:hover{transform:translateY(-4px)}
+    footer{background:var(--panel);color:var(--muted);text-align:center;padding:1.2rem;margin-top:2rem;border-top:1px solid #202938}
   </style>
 </head>
 <body>
 
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/projects.html">Projects</a>
+  <a href="https://www.linkedin.com/in/hamedtaeb" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="mailto:hamedtaeb@gmail.com">Contact</a>
+</nav>
+
 <header>
   <h1>👋 Hi, I’m Hamed</h1>
-  <p>Data-Driven Product Manager & Data Scientist | Building AI-Powered Products & Analytics Solutions</p>
+  <p>Data-Driven Product Manager & Data Scientist — building AI-informed, analytics-powered products</p>
 </header>
 
 <section>
-  <h2>About Me</h2>
-  <p>
-    I’m a data-driven professional with 15+ years of experience at the intersection of 
-    <strong>product strategy, analytics, and technology</strong>. I build scalable products, 
-    apply machine learning and data analytics, and deliver measurable outcomes through cross-functional collaboration.
-  </p>
+  <h2>About</h2>
+  <p>I’m a data-driven professional with 15+ years at the intersection of <strong>product strategy, analytics, and technology</strong>.
+     I bridge business vision with data execution using <strong>Python</strong>, <strong>SQL</strong>, and experimentation to launch scalable products
+     and deliver measurable outcomes with cross-functional teams.</p>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <ul>
-    <li>Python, SQL, Pandas, NumPy, SciPy</li>
-    <li>Machine Learning: Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM, NLP</li>
-    <li>Visualization: Matplotlib, Seaborn, Plotly</li>
-    <li>Product Management: Roadmaps, Agile/Scrum, Stakeholder Management, Release Management</li>
-    <li>Cloud & Tools: AWS, APIs, Git, Jira, Confluence</li>
-  </ul>
+  <div>
+    <span class="pill">Python</span>
+    <span class="pill">SQL</span>
+    <span class="pill">Pandas</span>
+    <span class="pill">NumPy</span>
+    <span class="pill">SciPy</span>
+    <span class="pill">A/B Testing</span>
+    <span class="pill">Statistical Modeling</span>
+    <span class="pill">Predictive Analytics</span>
+    <span class="pill">Time Series</span>
+    <span class="pill">Matplotlib</span>
+    <span class="pill">Seaborn</span>
+    <span class="pill">Plotly</span>
+    <span class="pill">Roadmaps</span>
+    <span class="pill">Agile / Scrum</span>
+    <span class="pill">Stakeholder Management</span>
+    <span class="pill">Release Management</span>
+    <span class="pill">AWS</span>
+    <span class="pill">APIs</span>
+    <span class="pill">Git</span>
+  </div>
 </section>
 
 <section>
   <h2>Featured Projects</h2>
-  <div class="projects">
-    <div class="card">
+  <div class="grid">
+    <article class="card">
       <h3><a href="https://github.com/hamedtaeb/Customer-Churn-Prediction">Customer Churn Prediction</a></h3>
-      <p>Classification models (LogReg, Random Forest, XGBoost, LightGBM) optimized with F1 and AUC-ROC metrics.</p>
-    </div>
-    <div class="card">
+      <p>Classification with Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM; tuned for F1 & AUC-ROC.</p>
+    </article>
+    <article class="card">
       <h3>Used Car Price Prediction</h3>
-      <p>Regression models compared by RMSE for accurate pricing strategies.</p>
-    </div>
-    <div class="card">
+      <p>Regression models compared by RMSE for accurate pricing decisions. (Repo coming soon)</p>
+    </article>
+    <article class="card">
       <h3>Taxi Demand Forecasting</h3>
-      <p>Time series forecasting with feature engineering for hourly demand predictions.</p>
-    </div>
-    <div class="card">
+      <p>Time-series forecasting with feature engineering for hourly demand. (Repo coming soon)</p>
+    </article>
+    <article class="card">
       <h3>IMDB Sentiment Classifier</h3>
-      <p>NLP pipeline for text classification, achieving strong precision, recall, and F1 scores.</p>
-    </div>
+      <p>NLP pipeline for text classification; strong precision/recall & F1 performance. (Repo coming soon)</p>
+    </article>
   </div>
+  <p style="margin-top:1rem"><a href="/projects.html">See all projects →</a></p>
 </section>
 
 <footer>
-  <p>📩 Contact: <a href="mailto:hamedtaeb@gmail.com">hamedtaeb@gmail.com</a> | 
-  <a href="https://www.linkedin.com/in/hamedtaeb">LinkedIn</a> | 
-  <a href="https://github.com/hamedtaeb">GitHub</a></p>
+  📩 <a href="mailto:hamedtaeb@gmail.com">hamedtaeb@gmail.com</a> &nbsp;|&nbsp;
+  💼 <a href="https://www.linkedin.com/in/hamedtaeb" target="_blank" rel="noopener">linkedin.com/in/hamedtaeb</a> &nbsp;|&nbsp;
+  💻 <a href="https://github.com/hamedtaeb" target="_blank" rel="noopener">github.com/hamedtaeb</a>
 </footer>
 
 </body>
